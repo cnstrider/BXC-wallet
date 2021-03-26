@@ -1,0 +1,26 @@
+package com.landis.eoswallet.net.model;
+
+import java.util.List;
+
+public class ProposalInfo {
+
+
+    /**
+     * rows : [{"proposal_name":"aaaaa","packed_transaction":"3f2a9a5f2f796f38df4d00000000010000000000ea3055000000572d3ccdcd0100e008cd1503228500000000a8ed32322e00e008cd1503228500380bfb1288a678102700000000000004454f53000000000d6d756c7469706c65207465737400640000000000000004454f5300000000"},{"proposal_name":"sfasfa","packed_transaction":"064c995f282fb6a958bb00000000010000000000ea3055000000572d3ccdcd0100e008cd1503228500000000a8ed32322e00e008cd1503228500380bfb1288a678204e00000000000004454f53000000000d6d756c7469706c65207465737400640000000000000004454f5300000000"}]
+     * more : false
+     */
+
+    public boolean more;
+    public List<RowsBean> rows;
+
+    public static class RowsBean  {
+        /**
+         * proposal_name : aaaaa
+         * packed_transaction : 3f2a9a5f2f796f38df4d00000000010000000000ea3055000000572d3ccdcd0100e008cd1503228500000000a8ed32322e00e008cd1503228500380bfb1288a678102700000000000004454f53000000000d6d756c7469706c65207465737400640000000000000004454f5300000000
+         */
+        public String proposal_name;
+        public String packed_transaction;
+        public String proposer;
+
+    }
+}

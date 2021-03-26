@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.landis.eoswallet.ui.home.viewmodel.item.AppInfoViewModel" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:onClick="@{() -> viewModel.onClickItem()}"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <com.landis.eoswallet.widget.ShapedImageView
+            app:imageUrl="@{viewModel.logo}"
+            android:id="@+id/iv_logo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:background="#E5E9F2"
+            app:round_radius="9dp"
+            app:shape_mode="round_rect" />
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/iv_logo"
+            android:text="@{viewModel.appName}"
+            android:textColor="#1C2D41"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_name"
+            android:layout_alignLeft="@+id/txt_name"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:lines="2"
+            android:text="@{viewModel.memo}"
+            android:textColor="#8392A5"
+            android:textSize="11sp" />
+
+    </RelativeLayout>
+</layout>

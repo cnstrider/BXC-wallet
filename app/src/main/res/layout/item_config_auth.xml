@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data >
+        <variable
+            name="viewModel"
+            type="com.landis.eoswallet.ui.ringsign.viewmodel.item.ConfigAuthItemViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_margin="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:text="@{viewModel.actor}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_marginRight="8dp"
+            android:id="@+id/iv_delete_auth"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_delete_auth"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+    </RelativeLayout>
+</layout>

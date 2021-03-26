@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data >
+        <variable
+            name="viewModel"
+            type="com.landis.eoswallet.ui.vote.viewmodel.VoteViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginLeft="15dp"
+                android:id="@+id/iv_vote_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:srcCompat="@mipmap/icon_aty_back" />
+
+            <TextView
+                android:textSize="16sp"
+                android:textColor="#1C2D41"
+                android:id="@+id/tv_vote_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@{@string/Number_node_voting_bounds+viewModel.voteVersion+@string/session}" />
+        </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorColor="#4D7BFE"
+        android:id="@+id/vote_tab_layout"
+        app:tabSelectedTextColor="#4D7BFE"
+        app:tabTextColor="#8392A5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+        <View
+            android:background="#E5E9F2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vote_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/tab_app"
+        android:title="@string/application"
+        android:icon="@mipmap/tab_app" />
+
+    <item
+        android:id="@+id/tab_wallet"
+        android:title="@string/wallet"
+        android:icon="@mipmap/tab_qbao" />
+
+    <item
+        android:id="@+id/tab_my"
+        android:title="@string/my"
+        android:icon="@mipmap/tab_my" />
+</menu>

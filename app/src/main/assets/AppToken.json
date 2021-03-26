@@ -1,0 +1,26 @@
+﻿[
+    {
+      "amount": 20000000,
+      "logo": "http://a.zh2016.top:8080/logo/us_logo1.png",
+      "tokenname": "USDT",
+      "url": "www.eth.org"
+    },
+    {
+      "amount": 1000000000,
+      "logo": "http://a.zh2016.top:8080/logo/bxc_logo1.png",
+      "tokenname": "BXC",
+      "url": "www.bxct.io"
+    },
+    {
+      "amount": 200000000,
+      "logo": "http://a.zh2016.top:8080/logo/v_logo1.png",
+      "tokenname": "VIC",
+      "url": ""
+    },
+    {
+      "amount": 200000000,
+      "logo": "http://a.zh2016.top:8080/logo/test_logo1.png",
+      "tokenname": "BXCT",
+      "url": ""
+    }
+]

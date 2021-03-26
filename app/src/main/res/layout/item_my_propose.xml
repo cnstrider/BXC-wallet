@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.landis.eoswallet.ui.ringsign.viewmodel.item.ProposalInfoItemViewModel" />
+        <import type="com.blankj.utilcode.util.StringUtils" />
+        <import type="android.view.View" />
+    </data>
+    <com.mcxtzhang.swipemenulib.SwipeMenuLayout
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="60dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+            <TextView
+                android:layout_centerVertical="true"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:text="@{viewModel.proposalName}"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:onClick="@{()->viewModel.seeProposeDetails()}"
+                android:id="@+id/tv_propose_details"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="@string/see_details"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:background="@drawable/shape_bg_radius_6_blue"
+                android:textColor="@color/white"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textSize="13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <TextView
+            android:visibility="@{StringUtils.isEmpty(viewModel.proposer)?View.GONE:View.VISIBLE}"
+            android:id="@+id/tv_propose_delete"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:background="#FFF55030"
+            android:gravity="center"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/delete"
+            android:textColor="#FFFFFFFF"
+            android:textSize="13sp" />
+    </com.mcxtzhang.swipemenulib.SwipeMenuLayout>
+</layout>

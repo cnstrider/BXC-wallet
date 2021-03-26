@@ -1,0 +1,30 @@
+ [
+    {
+      "Source_Token": "USDT",
+      "Target_Token": "BXC",
+      "Rate": 10,
+      "id": 1,
+      "Target_Addr": "bxcexchange"
+    },
+    {
+      "Source_Token": "BXC",
+      "Target_Token": "VIC",
+      "Rate": 10,
+      "id": 2,
+      "Target_Addr": "bxcexchange"
+    },
+    {
+      "Source_Token": "BXC",
+      "Target_Token": "USDT",
+      "Rate": 0.1,
+      "id": 3,
+      "Target_Addr": "bxcexchange"
+    },
+    {
+      "Source_Token": "VIC",
+      "Target_Token": "BXC",
+      "Rate": 0.1,
+      "id": 4,
+      "Target_Addr": "bxcexchange"
+    }
+  ]

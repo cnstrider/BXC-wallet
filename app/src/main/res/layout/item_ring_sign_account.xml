@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.landis.eoswallet.ui.ringsign.viewmodel.item.RingSignAccountItemViewModel" />
+        <import type="android.view.View" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp">
+        <TextView
+            android:id="@+id/tv_account_name"
+            android:layout_centerVertical="true"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:text="@{viewModel.accountName}"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:textColor="@color/text_blue"
+            android:textSize="14sp"
+            android:layout_marginLeft="94dp"
+            android:layout_centerVertical="true"
+            android:text="@{viewModel.balance}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:onClick="@{()->viewModel.onConfigWeightClickItem()}"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/tv_create_propose"
+            android:id="@+id/tv_config"
+            android:gravity="center"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="@{viewModel.showConfig?@string/config_weights:@string/see_weights}"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:background="@drawable/shape_bg_radius_6_blue"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:textSize="13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:onClick="@{()->viewModel.onCreateProposeClickItem()}"
+            android:id="@+id/tv_create_propose"
+            android:gravity="center"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="@string/initiate_proposal"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:background="@drawable/shape_bg_radius_6_blue"
+            android:textColor="@color/white"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</layout>

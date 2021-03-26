@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.landis.eoswallet.ui.wallet.viewmodel.item.TransactionRecordsViewModel" />
+
+        <import type="android.text.TextUtils" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/image_dian"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:src="@{viewModel.income?@drawable/icon_record_right:@drawable/icon_record_left}" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="9dp"
+            android:layout_toRightOf="@+id/image_dian"
+            android:gravity="center_vertical"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_token_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.income?viewModel.payer:viewModel.remitter}"
+                android:textColor="#ff3c4858"
+                android:textSize="14dp" />
+
+
+            <TextView
+                android:id="@+id/txt_memo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="15dp"
+                android:text="@{viewModel.memo}"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:textColor="#ff8392a5"
+                android:textSize="12dp"
+                android:visibility="@{TextUtils.isEmpty(viewModel.memo)?View.GONE:View.VISIBLE}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@{viewModel.blcokTime}"
+                android:textColor="#ff8392a5"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:text="@{viewModel.income?@string/str_plus(viewModel.amount):@string/str_del(viewModel.amount)}"
+            android:textColor="@{viewModel.income?@color/green:@color/red}"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_line_grey" />
+    </RelativeLayout>
+</layout>

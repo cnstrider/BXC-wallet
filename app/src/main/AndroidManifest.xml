@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.landis.eoswallet">
+
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <application
+        android:name=".EosWalletApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EosWallet"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name=".ui.other.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.home.view.MainActivity" />
+        <activity android:name=".ui.account.view.AccountActivity" />
+        <activity android:name=".ui.account.view.FriendCreateAccountActivity" />
+        <activity android:name=".ui.account.view.FriendCreateAccountSuccessActivity" />
+        <activity android:name=".ui.account.view.ImportAccountActivity" />
+        <activity android:name=".ui.account.view.CreateAccountOkActivity"/>
+        <activity android:name=".ui.wallet.view.SetWalletPasswordActivity"/>
+        <activity android:name=".ui.other.WebActivity"/>
+        <activity android:name=".ui.wallet.view.WalletKeyActivity"/>
+        <activity android:name=".ui.other.AboutUsActivity"/>
+        <activity android:name=".ui.vote.view.VoteActivity"/>
+        <activity android:name=".ui.ringsign.view.RingSignActivity"/>
+        <activity android:name=".ui.ringsign.view.RingSignSearchActivity"/>
+        <activity android:name=".ui.wallet.view.IssuanceActivity"/>
+        <activity android:name=".ui.ringsign.view.CreateProposeActivity"/>
+        <activity android:name=".ui.ringsign.view.WeightsDetailsActivity"/>
+        <activity android:name=".ui.ringsign.view.ConfigRingSignAuthActivity"/>
+        <activity android:name=".ui.ringsign.view.ProposeDetailsActivity"/>
+        <activity android:name=".ui.ringsign.view.CreateRingSignAccountActivity"/>
+        <activity android:name=".ui.account.view.AccountDetailActivity"/>
+        <activity android:name=".ui.other.view.ScanActivity"/>
+        <activity android:name=".ui.account.view.CreateAccountForFriendsActivity"/>
+        <activity android:name=".ui.wallet.view.WalletDetailActivity"
+            android:theme="@style/FullTheme" />
+        <activity android:name=".ui.wallet.view.TransactionActivity"/>
+    </application>
+
+</manifest>

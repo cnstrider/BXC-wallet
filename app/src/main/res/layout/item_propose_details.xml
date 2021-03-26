@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.landis.eoswallet.ui.ringsign.viewmodel.item.ProposeDetailesItemViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+        <TextView
+            android:textColor="@{viewModel.state==0?@color/propose_un_signed_color:@color/propose_signed_color}"
+            android:layout_centerVertical="true"
+            android:textSize="14sp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:text="@{viewModel.accountName}"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:textColor="@{viewModel.state==0?@color/propose_un_signed_color:@color/propose_signed_color}"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="@{viewModel.state==0?@string/propose_un_signed:@string/propose_signed}"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textSize="13sp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</layout>

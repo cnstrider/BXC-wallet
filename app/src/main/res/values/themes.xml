@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AnimeToolbar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <!--设置ActionBar的标题的样式-->
+        <item name="android:titleTextStyle">@style/ActionBarTextStyle</item>
+    </style>
+    <style name="CustomToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dp</item><!-- 设置该属性边距为0dp-->
+    </style>
+    <style name="ActionBarTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <!--欢迎界面主题-->
+    <style name="SplashTheme" >
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
+
+    <style name="line_blue">
+        <item name="android:layout_width">2dp</item>
+        <item name="android:layout_height">14dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+</resources>

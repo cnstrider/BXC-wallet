@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data >
+        <variable
+            name="viewModel"
+            type="com.landis.eoswallet.ui.ringsign.viewmodel.CreateRingSignAccountViewModel" />
+        <import type="com.blankj.utilcode.util.SPUtils"/>
+        <import type="com.landis.eoswallet.base.constant.SpConst"/>
+        <variable
+            name="account"
+            type="String" />
+    </data>
+    <LinearLayout
+        android:background="#d8d8d8"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:paddingTop="20dp"
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#4d7bfe">
+            <ImageView
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:src="@mipmap/icon_back_white"
+                android:id="@+id/iv_ring_sign_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:paddingBottom="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_address"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_white_radius_bg"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <View
+                    style="@style/line_blue"/>
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="6dp"
+                    android:text="@string/founder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <TextView
+                android:text="@{SPUtils.getInstance().getString(SpConst.WALLET_NAME)}"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="26dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <View
+                    style="@style/line_blue"/>
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="6dp"
+                    android:text="@string/pub_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <TextView
+                android:text="@{SPUtils.getInstance().getString(SpConst.P_B_K)}"
+                android:layout_marginRight="20dp"
+                android:id="@+id/tv_create_account_pub_key"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="26dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <View
+                    style="@style/line_blue"/>
+
+                <TextView
+                    android:text="@{@string/balance+viewModel.bxcBalance+@string/currency_symbol}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="6dp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+            <TextView
+                android:textColor="@color/red"
+                android:text="@string/create_ring_sign_account_fee"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="26dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <View
+                    style="@style/line_blue"/>
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="6dp"
+                    android:text="@string/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="26dp"
+                    android:text="mul."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:text="@={account}"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="6dp"
+                    android:layout_marginRight="60dp"
+                    android:digits=".12345abcdefghijklmnopqrstuvwxyz"
+                    android:maxLength="7"
+                    android:hint="@string/create_ring_sign_account_rule"
+                    android:background="@drawable/shape_stroke_rectangle_grey"
+                    android:id="@+id/ed_ring_sign_account_name"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"/>
+            </LinearLayout>
+            <TextView
+                android:onClick="@{()->viewModel.checkAccount(account)}"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="60dp"
+                android:textColor="@color/white"
+                android:paddingRight="40dp"
+                android:paddingLeft="40dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@drawable/shape_button_bg_blue"
+                android:text="@string/establish"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

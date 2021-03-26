@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.landis.eoswallet.ui.account.viewmodel.FriendCreateAccountViewModel" />
+    </data>
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:paddingBottom="20dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="#1C2D41"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="60dp"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/friend_create_account" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/shape_dotted_line_red_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="#1C2D41"
+                    android:layout_marginLeft="12dp"
+                    android:layout_width="wrap_content"
+                    android:text="@string/account_private_key"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textSize="14sp"
+                    android:id="@+id/tv_private_key_copy"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/text_blue"
+                    android:text="@string/copy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="@{viewModel.priKey}"
+                    android:textSize="14sp"
+                    android:textColor="#1C2D41"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@+id/tv_private_key_copy"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="12dp"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="#1C2D41"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:text="@string/account_public_key"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textSize="14sp"
+                    android:id="@+id/tv_public_key_copy"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/text_blue"
+                    android:text="@string/copy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="@{viewModel.pubKey}"
+                    android:textSize="14sp"
+                    android:textColor="#1C2D41"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@+id/tv_public_key_copy"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/image_qr"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="28dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/shape_qr_bg" />
+            <TextView
+                android:textSize="14sp"
+                android:textColor="#1C2D41"
+                android:lineSpacingExtra="8dp"
+                android:id="@+id/tv_friend_create_account_tip"
+                android:layout_marginTop="12dp"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <Button
+                    android:textSize="14sp"
+                    android:id="@+id/btn_friend_create_account_save_qr_code"
+                    android:text="@string/save_qr_code"
+                    android:textColor="@color/white"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_blue_bg_radius_44"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:id="@+id/btn_friend_create_account_created"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:text="@string/friend_created"
+                    android:textColor="@color/white"
+                    android:background="@drawable/shape_blue_bg_radius_44"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</layout>

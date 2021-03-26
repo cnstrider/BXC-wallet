@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:paddingBottom="30dp"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/shape_white_radius_bg">
+    <RelativeLayout
+        android:id="@+id/rl_receive_claim_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_close_receive_claim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="20dp"
+            android:padding="4dp"
+            android:src="@mipmap/icon_aty_close" />
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tv_title_receive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/receive_bonus"
+            android:textColor="#1C2D41"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_receive_claim_title"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/super_node"
+        android:textColor="#8392A5"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_receive_claim_super_node"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_receive_claim_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginRight="20dp"
+        android:gravity="right"
+        android:textColor="#3C4858"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_receive_type_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_receive_claim_super_node"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/extractable_balance"
+        android:textColor="#8392A5"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_receive_claim_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_receive_claim_super_node"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:gravity="right"
+        android:textColor="#3C4858"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_receive_claim_number"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/fee_cost"
+        android:textColor="#8392A5"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_receive_claim_free"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_receive_claim_number"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:gravity="right"
+        android:text="0.03 BXC"
+        android:textColor="#3C4858"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_receive_claim_continue"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="@string/determine"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_button_bg_blue"
+        android:layout_below="@+id/tv_receive_claim_free"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

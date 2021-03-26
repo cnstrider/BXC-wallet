@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="EOSBXC"></dbname>
+    <version value="1"></version>
+    <list>
+        <mapping class="com.landis.eoswallet.net.model.RingSignAccountInfo"></mapping>
+        <mapping class="com.landis.eoswallet.net.model.ProposalBean"></mapping>
+    </list>
+</litepal>

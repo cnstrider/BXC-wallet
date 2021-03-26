@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:paddingBottom="20dp"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"
+    android:background="@drawable/shape_white_radius_bg"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/please_enter_wallet_password_hint"
+        android:textColor="#ff1c2d41"
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:hint="@string/please_enter_six_digit_password"
+        android:textColor="@color/dark_blue"
+        android:inputType="numberPassword"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/shape_oval_border_grey"
+        android:textColorHint="#ff8392a5"
+        android:textSize="12dp" />
+    <TextView
+        android:id="@+id/btn_define"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_button_bg_blue"
+        android:clickable="true"
+        android:elevation="1.5dp"
+        android:gravity="center"
+        android:text="@string/determine"
+        android:textColor="#ffffff"
+        android:textSize="14dp" />
+</LinearLayout>

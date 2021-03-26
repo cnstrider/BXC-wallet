@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:paddingBottom="30dp"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/shape_white_radius_bg">
+
+    <TextView
+        android:id="@+id/tv_vote_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/node_vote"
+        android:textColor="#1C2D41"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/iv_close_vote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="20dp"
+        android:src="@mipmap/icon_aty_close" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_close_vote"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/super_node"
+        android:textColor="#8392A5"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_vote_super_node"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_close_vote"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginRight="20dp"
+        android:gravity="right"
+        android:textColor="#3C4858"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_vote_super_node"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/current_voting_amount"
+        android:textColor="#8392A5"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_vote_staked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_vote_super_node"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:gravity="right"
+        android:textColor="#3C4858"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_vote_staked"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/available_voting_amount"
+        android:textColor="#8392A5"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_vote_available_staked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_vote_staked"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:gravity="right"
+        android:textColor="#3C4858"
+        android:textSize="12sp" />
+    <RadioGroup
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/tv_vote_available_staked"
+        android:id="@+id/radio_group_vote"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/radio_new_vote"
+            android:drawableLeft="@drawable/selector_radio_button_bg"
+            android:button="@null"
+            android:text="@string/modify_vote"
+            android:checked="true"
+            android:drawablePadding="6dp"
+            android:textColor="#1C2D41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/radio_redeem_vote"
+            android:drawableLeft="@drawable/selector_radio_button_bg"
+            android:button="@null"
+            android:layout_marginLeft="20dp"
+            android:drawablePadding="6dp"
+            android:textColor="#1C2D41"
+            android:text="@string/redeem_vote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RadioGroup>
+    <RelativeLayout
+        android:id="@+id/rl_vote_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radio_group_vote"
+        android:layout_marginTop="15dp">
+
+        <EditText
+            android:inputType="number"
+            android:textColor="#8392A5"
+            android:textSize="12sp"
+            android:id="@+id/ed_vote_number"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shape_stroke_grey_radius_6"
+            android:hint="@string/vote_number_hint"
+            android:paddingStart="16dp" />
+
+        <TextView
+            android:textColor="#3C4858"
+            android:layout_marginRight="26dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="BXC" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_vote_fee"
+        android:textSize="10sp"
+        android:textColor="#8392A5"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/rl_vote_number"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vote_fee" />
+    <View
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/view_vote_dialog_line"
+        android:layout_below="@+id/tv_vote_fee"
+        android:background="#E5E9F2"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"/>
+    <TextView
+        android:layout_below="@+id/view_vote_dialog_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/modify_vote_number"
+        android:textColor="#8392A5"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_change_vote_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_vote_dialog_line"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:gravity="right"
+        android:text="0 BXC"
+        android:textColor="#EA3550"
+        android:textSize="12sp" />
+    <TextView
+        android:id="@+id/tv_vote_continue"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="@string/determine"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_button_bg_blue"
+        android:layout_below="@+id/tv_change_vote_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

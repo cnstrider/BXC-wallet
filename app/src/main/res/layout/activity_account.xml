@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_welcome_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="100dp"
+            android:textStyle="bold"
+            android:text="@string/welcome_tips"
+            android:textColor="#ff1c2d41"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/tv_no_account_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_welcome_tips"
+            android:layout_alignLeft="@+id/tv_welcome_tips"
+            android:layout_marginTop="12dp"
+            android:text="@string/no_account_tips"
+            android:textColor="#8392a5"
+            android:textSize="15dp" />
+
+
+        <TextView
+            android:id="@+id/tv_friend_create"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_below="@+id/tv_no_account_tips"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="30dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:drawableRight="@mipmap/icon_right"
+            android:text="@string/friend_create_account"
+            android:textColor="#ff1c2d41"
+            android:textColorHint="#8392A5"
+            android:textCursorDrawable="@drawable/edit_cursor_color"
+            android:textSize="15dp" />
+
+        <!--android:letterSpacing="0.2"-->
+        <View
+            android:id="@+id/view1"
+            android:layout_below="@+id/tv_friend_create"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_height="1dp"
+            android:background="@color/color_line_grey"/>
+        <TextView
+            android:id="@+id/tv_import_wallet"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_below="@+id/view1"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:drawableRight="@mipmap/icon_right"
+            android:text="@string/import_wallet"
+            android:textColor="#ff1c2d41"
+            android:textColorHint="#8392A5"
+            android:textCursorDrawable="@drawable/edit_cursor_color"
+            android:textSize="15dp" />
+        <View
+            android:layout_below="@+id/tv_import_wallet"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_height="1dp"
+            android:background="@color/color_line_grey"/>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,20 @@
+[
+  {
+    "appname": "Block Browser",
+    "memo": " http://www.bxct.io",
+    "url": "lospocket://route/page/web?url=http://bxc.zh2016.top",
+    "logo": "http://a.zh2016.top:8080/logo/browser_logo1.png"
+  },
+  {
+    "appname": "一键上链",
+    "memo": "一诺千金",
+    "url": "lospocket://route/page/web?url=http://a.zh2016.top:8080/api/chain.htm",
+    "logo": "http://a.zh2016.top:8080/logo/link_logo1.png"
+  },
+  {
+    "appname": "一键发币",
+    "memo": "通证工具",
+    "url": "lospocket://route/page/web?url=http://a.zh2016.top:8080/api/onbuild.htm",
+    "logo": "http://a.zh2016.top:8080/logo/token_logo1.png"
+  }
+]

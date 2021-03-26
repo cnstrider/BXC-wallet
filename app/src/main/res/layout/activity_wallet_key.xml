@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_aty_back" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:textColor="#1C2D41"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appbar">
+
+            <TextView
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:id="@+id/tv_key"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/label_phone"
+                android:background="@drawable/shape_dotted_line_red_bg"
+                android:gravity="top|left"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingRight="18dp"
+                android:paddingBottom="12dp"
+                android:textColor="#1C2D41"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_copy"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@+id/tv_key"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/shape_button_bg_blue"
+                android:elevation="1.5dp"
+                android:gravity="center"
+                android:text="@string/copy"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>
